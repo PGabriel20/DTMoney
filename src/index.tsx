@@ -17,8 +17,14 @@ createServer({
           category: 'food',
           createdAt: new Date()
         }
-    ]
+      ]
     });
+
+    this.post('/transactions', (schema, request)=>{
+      const data = JSON.parse(request.requestBody);
+
+      return data;
+    })
   }
 })
 
